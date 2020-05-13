@@ -18,6 +18,10 @@ public class FirstUniqueTest {
         assertThat(firstUnique.showFirstUnique(), is(4));
         firstUnique.add(4);
         assertThat(firstUnique.showFirstUnique(), is(-1));
+        firstUnique.add(4);
+        assertThat(firstUnique.showFirstUnique(), is(-1));
+        firstUnique.add(4);
+        assertThat(firstUnique.showFirstUnique(), is(-1));
     }
 
     @Test

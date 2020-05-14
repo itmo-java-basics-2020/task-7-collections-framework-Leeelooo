@@ -24,7 +24,7 @@ public class KthLargest {
     public int add(int val) {
         orderedSet.add(new Wrapper(val));
         return orderedSet.stream()
-                .skip(k - 1)
+                .skip(orderedSet.size() - k)
                 .findFirst()
                 .map(Wrapper::getValue)
                 .orElse(-1);
